@@ -394,7 +394,7 @@ call_mfa(Module, Function, Args) ->
         Type:Reason:Trace ->
             {error, {erlang, Type, Reason, Trace}}
     end.
--else
+-else.
  %% OTP 20 or lower
 call_mfa(Module, Function, Args) ->
          try {ok, apply(Module, Function, Args)}
